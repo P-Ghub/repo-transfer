@@ -1,0 +1,28 @@
+{% extends "store_templates/base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- Confirmation Content -->
+<main role="main" style="margin-top: 50px;">
+    <section class="jumbotron text-center">
+
+      <div class="container">
+        <img src="{% static 'logo.jpg' %}" height=150></img>
+        <h1 class="jumbotron-heading">Comfirm Order</h1>
+        <p class="lead text-muted" style="margin-bottom: 40px;">Please confirm order!</p>
+        <img src="{{ item.image.url }}" height=300></img>
+        <p style="margin-top: 20px;"> 
+          <a href="{% url 'user_auth:store_login' %}" class="btn btn-dark my-2">Confirm</a> 
+          <a href="{% url 'store:home_page' %}" class="btn btn-dark my-2">Cancel</a>
+        </p>
+      </div>
+
+    </section>
+    </main>
+{% endblock content%}
+
+
+
+
+
+ 

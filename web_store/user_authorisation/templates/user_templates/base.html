@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>KICKS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <!-- Cards Style -->
+    <div class="container">
+        <style>
+          .right-item {
+              float: right;
+
+          }
+          
+    /* Styling for the navigation bar */
+          .navbar {
+            
+            background-color: #f1f1f1; 
+            padding: 8px; 
+            display: flex; 
+            align-items: center; 
+          }
+        
+          .navbar-brand {
+            font-size: 60px; 
+            margin-right: auto; 
+            text-decoration: none; 
+            color: #333;
+          }
+
+          .nav-link {
+            text-decoration: none; 
+            color: #333; 
+            margin-left: 15px; 
+          }
+
+    /* Styling for the footer */
+          footer {
+            margin-top: 10px; 
+            text-align: center; 
+          }
+        
+    /* Styling for the line before the footer */
+          .footer-line {
+            border-top: 1px solid #a7a6a6;
+            margin: 40px auto; 
+            width: 60%; 
+          }
+      
+        
+        </style>
+    </div>
+
+  </head>
+
+  <body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <a class="navbar-brand" href="/">KICKS</a>
+      <a class="nav-link" href="#">About</a>
+      <a class="nav-link" href="#">Contact</a>
+      <a class="nav-link" href="#">Careers</a>
+    </nav>
+
+    {% block content %}{% endblock content %}
+
+    <div class="footer-line"></div>
+
+    <footer class="text-muted" style="text-align: center;">
+      <div class="container">
+        <p class="float-right" style="font-size: 15px;">
+          <a href="#">Back to top</a>
+        </p>
+        <p style="font-size: 12px;">KICKS is a proudly SA brand, with 80% of our material sourced locally</p>
+        <p style="font-size: 12px;">
+          Give us a shout <a href="mailto:john@gmail.com">mail</a>.</p>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+  </body>
+</html>
+
+</body>
+</html>

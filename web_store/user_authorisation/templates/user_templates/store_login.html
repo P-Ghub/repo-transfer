@@ -1,0 +1,65 @@
+{% extends "store_templates/base.html" %}
+{% load static %}
+{% block content %}
+
+<style>
+  /* Center the container */
+  .center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh; /* Set the container's height to 100% of the viewport height */
+  }
+
+  /* Style the heading */
+  h1 {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  /* Style the form */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Style the labels and inputs */
+  label {
+    font-weight: bold;
+    margin-bottom: 10px; /* Set the margin between labels */
+  }
+
+  input {
+    padding: 5px;
+    margin: 5px;
+  }
+
+  /* Style the small text below the form */
+  small {
+    margin-top: 10px;
+  }
+</style>
+
+<!-- Form container -->
+<div class="center-container">
+  <h1>Store Login</h1>
+
+    <form action="{% url 'user_auth:store_login' %}" method="post">
+      {% csrf_token %}
+    
+      <label>Username</label>
+      <input type="text" name="username" placeholder="User" required>
+    
+      <label>Password</label>
+      <input type="password" name="password" required>
+    
+      <input type="submit" value="Login" />
+      <small>Don't have an account? <a href="{% url 'user_auth:create_user' %}">Create Account</a></small>
+    </form>
+</div>
+
+{% endblock content%}

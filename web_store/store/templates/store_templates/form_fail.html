@@ -1,0 +1,24 @@
+{% extends "store_templates/base.html" %}
+{% load static %}
+{% block content %}
+
+<main role="main">
+    <section class="jumbotron text-center">
+      <div class="container">
+        <img src="{% static 'logo.jpg' %}" height=150></img>
+        <h1 class="jumbotron-heading">Comfirm Order</h1>
+        <p class="lead text-muted">{% message %}!</p>
+        <img src="{{ item.image.url }}" height=300></img>
+        <p>
+          <a href="#" class="btn btn-primary my-2">Confirm</a>
+          <a href="{% url 'home_page' %}" class="btn btn-primary my-2">Cancel</a>
+        </p>
+
+      </div>
+    </section>
+    </main>
+{% endblock content%}
+
+
+
+ 

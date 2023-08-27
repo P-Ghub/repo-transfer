@@ -1,0 +1,23 @@
+{% extends "store_templates/base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- Logo and information and instructions -->
+<main role="main" style="margin-top: 50px;">
+    <section class="jumbotron text-center">
+      <div class="container">
+        <img src="{% static 'logo.jpg' %}" height=150></img>
+        <h1 class="jumbotron-heading" style="margin-bottom: 40px;">Registration Successful!</h1>
+        <p>
+          <a href="{% url 'store:home_page' %}" class="btn btn-dark my-2">Home</a>
+          <a href="{% url 'store:successful_order' %}" class="btn btn-dark my-2">Confirm Order</a>
+       </p>
+      </div>
+    </section>
+    </main>
+{% endblock content%} 
+
+
+
+
+ 

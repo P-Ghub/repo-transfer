@@ -1,0 +1,46 @@
+{% extends "store_templates/base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- Logo and information and instructions -->
+<main role="main" style="margin-top: 50px;">
+    <section class="jumbotron text-center">
+      <div class="container">
+        <img src="{% static 'logo.jpg' %}" height=150></img>
+        <h1 class="jumbotron-heading">{{brand.brand}}</h1>
+        <p class="lead text-muted">select from some of the world's best shoe brands</p>
+        <p>
+          <a href="{% url 'store:home_page' %}" class="btn btn-dark my-2">Home</a>
+        </p>
+      </div>
+    </section>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row">
+            <!-- Loop through stock or shoes -->
+            {% for item in items.all %}
+              {% if brand.brand|lower == item.brand|lower %}
+                <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="{{ item.image.url }}" alt="shoe brand">
+                    <div class="card-body">
+                      <p class="card-text">{{ item.info }}</p>
+                          <a href="{% url 'store:confirmation_page' item.id%}" class="btn btn-secondary my-2">Buy now</a>                          
+                          <div class="right-item">
+                            <p class="card-text">{{ item.price }}</p>
+                          </div>          
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </main>
+{% endblock content%}
+
+
+
+ 

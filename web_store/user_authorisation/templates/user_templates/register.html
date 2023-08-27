@@ -1,0 +1,30 @@
+{% extends "user_templates/base.html" %}  
+{% block content %}
+
+<main role="main">
+    <section class="jumbotron">
+        <div class="container">
+            <h1 class="jumbotron-heading">{{ brand.brand }}</h1>
+                <div class="content-section">
+
+                    <!-- reg Form -->
+                    <form method="POST">
+                        {% csrf_token %}
+                        <fieldset class="form-group">
+                            {{ form.as_p }}
+                        </fieldset>
+                        <div class="form-group">
+                            <button class="btn btn-outline-info" type="submit">Sign Up</button>
+                        </div>
+                    </form>
+
+                    <div class="border-top pt-3">
+                        <small class="text-muted">
+                            Already Have an Account? <a class="ml-2" href="{% url 'register/store_login' %}">Sign in</a>  
+                        </small>
+                    </div>
+                </div>
+            </div> 
+        </section>  
+    </main>         
+{% endblock content %}
